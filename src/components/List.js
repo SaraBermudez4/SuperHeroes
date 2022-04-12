@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Container } from "react-bootstrap";
 import Cards from "./Cards";
 
 export default class List extends Component {
@@ -29,13 +30,20 @@ export default class List extends Component {
     }
 
     render() {
-        return <div>
-            {
-                this.state.superHeroes.map((heroe, index) => (
-                    <Cards heroe={heroe} key={index}
-                    />
-                ))
-            }
-        </div>;
+        return (
+            <Container>
+                <h1 color="white" >Lista de super heroes</h1>
+                <hr />
+                <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+                    {
+                        this.state.superHeroes.map((heroe, index) => (
+                            <Cards heroe={heroe} key={index}
+                            />
+                        ))
+                    }
+                </div>
+
+            </Container>
+        );
     }
 }

@@ -7,7 +7,7 @@ export default class Cards extends Component {
 
         return (
             <div>
-                <Card style={{ width: '18rem' }}>
+                <Card style={{ width: '18rem', color: 'black' }}>
                     <Card.Img variant="top" src={image} />
                     <Card.Body>
                         <Card.Title>
